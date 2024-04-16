@@ -1,0 +1,38 @@
+<div class="card text-center">
+    <div class="card-header">
+        Listado de carros
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Carros especiales</h5>
+        <p class="card-text">Adquiere tu próximo vehículo</p>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">UUID</th>
+                    <th scope="col">Activo</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Fecha Creación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let clientItem of clientList">
+                    <th scope="row">{{clientItem.id}}</th>
+                    <td>{{clientItem.isActive? 'Sí': 'No'}}</td>
+                    <td>{{clientItem.document}}</td>
+                    <td>{{clientItem.name}}</td>
+                    <td>{{clientItem.age}}</td>
+                    <td>{{clientItem.createdAt}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+        2 days ago
+    </div>
+</div>

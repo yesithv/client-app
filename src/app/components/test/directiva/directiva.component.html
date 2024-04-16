@@ -1,0 +1,14 @@
+
+<button (click)="validateShowList()" class="btn btn-primary my-3">
+    {{buttonText}}
+</button>
+
+<div class="card">
+    <div class="card-header">
+        Listado de cursos
+    </div>
+    <ul class="list-group" *ngIf="showList">
+        <li *ngFor="let courseItem of courseList" class="list-group-item" >{{courseItem}}</li>
+    </ul>
+</div>
+

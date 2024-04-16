@@ -1,0 +1,34 @@
+<div class="card text-center">
+    <div class="card-header">
+      Listado de carros
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Carros especiales</h5>
+      <p class="card-text">Adquiere tu próximo vehículo</p>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Automático?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let carItem of carList">
+            <th scope="row">{{carItem.id}}</th>
+            <td>{{carItem.model}}</td>
+            <td>{{carItem.year}}</td>
+            <td>{{carItem.automatic? 'Sí': 'No'}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      2 days ago
+    </div>
+  </div>

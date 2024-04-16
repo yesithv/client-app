@@ -1,0 +1,34 @@
+<div class="card text-center">
+    <div class="card-header">
+      Listado de colegios
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Mejores colegios</h5>
+      <p class="card-text">Para tu hijo</p>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Publico ?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let schoolItem of schoolList">
+            <th scope="row">{{schoolItem.id}}</th>
+            <td>{{schoolItem.name}}</td>
+            <td>{{schoolItem.capacity}}</td>
+            <td>{{schoolItem.isPublic? 'Sí': 'No'}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      2 days ago
+    </div>
+  </div>
